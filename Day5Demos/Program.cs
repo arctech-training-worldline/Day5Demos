@@ -11,14 +11,10 @@ namespace Day5Demos
     {
         static void Main(string[] args)
         {
-            if (args.Length > 0)
-            {
-                Console.WriteLine("Arguments not allowed in this program");
-                return;
-            }
+            ConsoleFormDemo.Test();
 
-            Demo5Indexer.TestIndexerWithPublicMemberVariables();            
-            Demo5Indexer.TestIndexer();
+            //Demo5Indexer.TestIndexerWithPublicMemberVariables();            
+            //Demo5Indexer.TestIndexer();
 
             //Demo4This.TestThis();
 
