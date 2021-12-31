@@ -28,7 +28,7 @@ namespace WeekendAssignment1
         {
             var form = new Form();
             var loginInfo = form.DisplayLogin(45, 10);
-            Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
+            Console.WriteLine($"You entered Username={loginInfo.Username}, Password={loginInfo.Password}");
             Console.ReadKey();
         }
 
@@ -40,7 +40,7 @@ namespace WeekendAssignment1
 
             var formLogin = new FormLogin("Hello World", 15, 5, 30, 8, formTheme);
             formLogin.Show();
-            LoginInfo loginInfo = formLogin.GetInput<LoginInfo>();
+            var loginInfo = formLogin.GetInput<LoginInfo>();
 
             Console.WriteLine();
             Console.WriteLine();

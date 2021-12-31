@@ -1,30 +1,44 @@
 ﻿using System;
+using System.Reflection.Emit;
 
 namespace WeekendAssignment1.ConsoleService;
 
 internal class FormField
 {
-    public string Name { get; set; }
-    public string Value { get; set; }
-    public int Left { get; set; }
-    public int Top { get; set; }
-    public int ValueLeft { get; set; }
-    public int ValueWidth { get; set; }
+    public string Name { get; }
+    public string Value { get; private set; }
+    public int Left { get; }
+    public int Top { get; }
+    public int ValueWidth { get; }
+    public string Label { get; }
 
-
-    public FormField(string name, int left, int top, int valueLeft, int valueWidth)
+    public FormField(string name, int left, int top, int valueWidth)
     {
         Name = name;
         Left = left;
         Top = top;
-
-        ValueLeft = valueLeft;
         ValueWidth = valueWidth;
+        Label = Name;
+    }
+
+    public FormField(string name, int left, int top, int valueWidth, string label)
+    {
+        Name = name;
+        Left = left;
+        Top = top;
+        ValueWidth = valueWidth;
+        Label = label;
     }
 
     public void Display(int formLeft, int formTop)
     {
         Console.SetCursorPosition(formLeft + Left, formTop + Top);
-        Console.Write($"{Name}: {new string('_', ValueWidth)}");
+        Console.Write($"{Label}: {new string('_', ValueWidth)}");
+    }
+
+    public void Input(int formLeft, int formTop)
+    {
+        Console.SetCursorPosition(formLeft + Left + Name.Length + 2, formTop + Top);
+        Value = Console.ReadLine();
     }
 }

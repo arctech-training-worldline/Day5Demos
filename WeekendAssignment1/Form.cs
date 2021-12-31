@@ -182,7 +182,7 @@ namespace WeekendAssignment1
             var info = new LoginInfo();
 
             Console.SetCursorPosition(x + 13, y + 2);
-            info.UserName = Console.ReadLine();
+            info.Username = Console.ReadLine();
 
             Console.SetCursorPosition(x + 13, y + 3);
             info.Password = Console.ReadLine();

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using WeekendAssignment1.ConsoleService.Exceptions;
+using WeekendAssignment1.Entities;
 
 namespace WeekendAssignment1.ConsoleService.Form
 {
@@ -37,6 +39,8 @@ namespace WeekendAssignment1.ConsoleService.Form
 
             DisplayFormFields();
 
+            var loginInfo = InputFormFields<LoginInfo>();
+
             Console.SetCursorPosition(_formBorder.Left, _formBorder.Bottom + 1);
         }
 
@@ -60,21 +64,37 @@ namespace WeekendAssignment1.ConsoleService.Form
 
         private void DisplayFormFields()
         {
+            //foreach (var formField in FormFields)
+            //{
+            //    Console.SetCursorPosition(_formBorder.Left + formField.Left, _formBorder.Top + formField.Top);
+            //    Console.Write($"{formField.Name}: {new string('_', formField.ValueWidth)}");
+            //}
             _formTheme.SetFormColor();
-            foreach (var formField in FormFields)
-            {
-                Console.SetCursorPosition(_formBorder.Left + formField.Left, _formBorder.Top + formField.Top);
-                Console.Write($"{formField.Name}: {new string('_', formField.ValueWidth)}");
-            }
-            _formTheme.ResetFormColor();
-        }
 
-        private void InputFormFields()
-        {
             foreach (var formField in FormFields)
             {
                 formField.Display(_formBorder.Left, _formBorder.Top);
             }
+
+            _formTheme.ResetFormColor();
+        }
+
+        private T InputFormFields<T>() where T : class, new()
+        {
+            T obj = new();
+            var inputType = typeof(T);
+
+            foreach (var formField in FormFields)
+            {
+                formField.Input(_formBorder.Left, _formBorder.Top);
+
+                var piInstance = inputType.GetProperty(formField.Name);
+
+                Debug.Assert(piInstance != null);
+                piInstance.SetValue(obj, formField.Value);
+            }
+
+            return obj;
         }
     }
 }

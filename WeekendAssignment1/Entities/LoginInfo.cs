@@ -8,7 +8,7 @@ namespace WeekendAssignment1.Entities
 {
     public class LoginInfo
     {
-        public string UserName;
-        public string Password;
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }
