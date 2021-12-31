@@ -1,19 +1,19 @@
-﻿using System;
+﻿using Day5Demos.AssignmentHelp.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day5Demos
+namespace Day5Demos.AssignmentHelp
 {
-    public class LoginInfo
-    {
-        public string UserName;
-        public string Password;
-    }
-
+    /// <summary>
+    /// NOTE: IGNORE the save/cancel buttons on the form
+    /// They are not needed as when you press enter on last field 
+    /// the input is anyway completed
+    /// </summary>
     public class Form
-    {
+    {        
         public int DisplayMainMenu(int x, int y)
         {
             Console.Clear();
@@ -92,6 +92,25 @@ namespace Day5Demos
 
             return menuId;
         }
+
+        internal void DisplayNewTransaction()
+        {
+            Console.WriteLine("You selected menu 3");
+            Console.ReadKey();
+        }
+
+        internal void DisplayNewSavingAccount()
+        {
+            Console.WriteLine("You selected menu 2");
+            Console.ReadKey();
+        }
+
+        internal void DisplayNewCustomer()
+        {
+            Console.WriteLine("You selected menu 1");
+            Console.ReadKey();
+        }
+
         public LoginInfo DisplayLogin(int x, int y)
         {
             Console.Clear();
@@ -128,54 +147,6 @@ namespace Day5Demos
             Console.Clear();
 
             return info;
-        }
-    }
-
-    internal class ConsoleFormDemo
-    {
-        public static void Test()
-        {
-            Form form = new Form();
-            //LoginInfo loginInfo = form.DisplayLogin(45, 10);
-
-            //Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
-
-            int menuId;
-
-            do
-            {
-                menuId = form.DisplayMainMenu(45, 10);
-
-                switch (menuId)
-                {
-                    case 1:
-                        Console.WriteLine("You selected menu 1");
-                        Console.ReadKey();
-                        break;
-                    case 2:
-                        Console.WriteLine("You selected menu 2");
-                        Console.ReadKey();
-                        break;
-                    case 3:
-                        Console.WriteLine("You selected menu 3");
-                        Console.ReadKey();
-                        break;
-                    case 4:
-                        Console.WriteLine("You selected menu 4");
-                        Console.ReadKey();
-                        break;
-                    case 5:
-                        Console.WriteLine("You selected menu 5");
-                        Console.ReadKey();
-                        break;
-                    case 6:
-                        Console.WriteLine("You selected menu 6");
-                        Console.ReadKey();
-                        break;
-                    default:
-                        break;
-                }
-            } while (menuId != 6);
         }
     }
 }
