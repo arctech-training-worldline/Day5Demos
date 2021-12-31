@@ -12,6 +12,7 @@
         static void Main(string[] args)
         {
             MonKeyBankingSolution monKeyBankingSolution = new MonKeyBankingSolution();
+            monKeyBankingSolution.LoginTest();
             monKeyBankingSolution.Start();
         }
     }

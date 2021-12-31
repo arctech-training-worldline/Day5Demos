@@ -22,6 +22,14 @@ namespace WeekendAssignment1
             customers = new List<Customer>();
         }
 
+        public void LoginTest()
+        {
+            Form form = new Form();
+            LoginInfo loginInfo = form.DisplayLogin(45, 10);
+            Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
+            Console.ReadKey();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -29,9 +37,7 @@ namespace WeekendAssignment1
         {
             Form form = new Form();
             Report report = new Report();
-            //LoginInfo loginInfo = form.DisplayLogin(45, 10);
-            //Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
-
+            
             int menuId;
 
             do

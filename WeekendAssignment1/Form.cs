@@ -150,8 +150,7 @@ namespace WeekendAssignment1
 
             return customer;
         }
-
-        /*
+        
         /// <summary>
         /// 
         /// </summary>
@@ -195,6 +194,5 @@ namespace WeekendAssignment1
 
             return info;
         }
-        */
     }
 }

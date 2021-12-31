@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WeekendAssignment1.Entities
 {
-    //public class LoginInfo
-    //{
-    //    public string UserName;
-    //    public string Password;
-    //}
+    public class LoginInfo
+    {
+        public string UserName;
+        public string Password;
+    }
 }
