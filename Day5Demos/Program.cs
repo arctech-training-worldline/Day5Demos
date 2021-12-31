@@ -1,5 +1,4 @@
-﻿using Day5Demos.AssignmentHelp;
-using Day5Demos.SchoolManagementSystem;
+﻿using Day5Demos.SchoolManagementSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +11,8 @@ namespace Day5Demos
     {
         static void Main(string[] args)
         {
-            ConsoleFormDemo.Test();
-
-            //Demo5Indexer.TestIndexerWithPublicMemberVariables();            
-            //Demo5Indexer.TestIndexer();
+            Demo5Indexer.TestIndexerWithPublicMemberVariables();            
+            Demo5Indexer.TestIndexer();
 
             //Demo4This.TestThis();
 

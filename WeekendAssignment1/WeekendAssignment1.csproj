@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CFBECFC9-B441-49B7-9DB5-4CD288A9A79C}</ProjectGuid>
+    <ProjectGuid>{76388ED2-060C-4C4A-B9FC-F8C838029AA6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day5Demos</RootNamespace>
-    <AssemblyName>Day5Demos</AssemblyName>
+    <RootNamespace>WeekendAssignment1</RootNamespace>
+    <AssemblyName>WeekendAssignment1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,24 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Demo1.cs" />
-    <Compile Include="Demo2Constructors.cs" />
-    <Compile Include="Demo3CopyConstructor.cs" />
-    <Compile Include="Demo3Destructor.cs" />
-    <Compile Include="Demo4This.cs" />
-    <Compile Include="Demo5Indexer.cs" />
-    <Compile Include="Rocket.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Form.cs" />
+    <Compile Include="MonKeyBankingSolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SchoolManagementSystem\Employee.cs" />
-    <Compile Include="SchoolManagementSystem\School.cs" />
-    <Compile Include="SchoolManagementSystem\Student.cs" />
+    <Compile Include="Report.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="documents\2021-12-31 - Session 1.pdf" />
-    <None Include="documents\CSharp-classes.pdf" />
-    <None Include="documents\WeekEndAssignment.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

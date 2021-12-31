@@ -1,10 +1,18 @@
-﻿using System;
+﻿using WeekendAssignment1.Entities;
+using System;
 using System.Collections.Generic;
 
-namespace Day5Demos.AssignmentHelp
+namespace WeekendAssignment1
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class Report
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customers"></param>
         internal void ShowCustomerAccountList(List<Customer> customers)
         {
             Console.WriteLine("You selected menu 4");
@@ -17,6 +25,10 @@ namespace Day5Demos.AssignmentHelp
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="customers"></param>
         internal void ShowAccountStatement(List<Customer> customers)
         {
             Console.WriteLine("You selected menu 5");

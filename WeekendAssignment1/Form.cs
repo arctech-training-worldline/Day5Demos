@@ -1,19 +1,27 @@
-﻿using Day5Demos.AssignmentHelp.Entities;
+﻿using WeekendAssignment1.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day5Demos.AssignmentHelp
+namespace WeekendAssignment1
 {
     /// <summary>
-    /// NOTE: IGNORE the save/cancel buttons on the form
+    /// NOTE: IGNORE the save/cancel buttons on the pdf form design 
     /// They are not needed as when you press enter on last field 
     /// the input is anyway completed
+    /// 
+    /// 
     /// </summary>
     public class Form
-    {        
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public int DisplayMainMenu(int x, int y)
         {
             Console.Clear();
@@ -93,18 +101,28 @@ namespace Day5Demos.AssignmentHelp
             return menuId;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         internal void DisplayNewTransaction()
         {
             Console.WriteLine("You selected menu 3");
-            Console.ReadKey();            
+            Console.ReadKey();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         internal void DisplayNewSavingAccount()
         {
             Console.WriteLine("You selected menu 2");
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         internal Customer DisplayNewCustomer()
         {
             Console.WriteLine("You selected menu 1");
@@ -133,6 +151,13 @@ namespace Day5Demos.AssignmentHelp
             return customer;
         }
 
+        /*
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public LoginInfo DisplayLogin(int x, int y)
         {
             Console.Clear();
@@ -170,5 +195,6 @@ namespace Day5Demos.AssignmentHelp
 
             return info;
         }
+        */
     }
 }

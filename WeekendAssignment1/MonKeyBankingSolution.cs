@@ -1,20 +1,30 @@
-﻿using System;
+﻿using WeekendAssignment1.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Day5Demos.AssignmentHelp
+namespace WeekendAssignment1
 {
+    /// <summary>
+    /// 
+    /// </summary>
     internal class MonKeyBankingSolution
     {
         List<Customer> customers;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public MonKeyBankingSolution()
         {
             customers = new List<Customer>();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void Start()
         {
             Form form = new Form();
