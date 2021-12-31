@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeekendAssignment1.ConsoleService;
+using WeekendAssignment1.ConsoleService.Form;
 
 namespace WeekendAssignment1
 {
@@ -12,22 +14,36 @@ namespace WeekendAssignment1
     /// </summary>
     internal class MonKeyBankingSolution
     {
-        List<Customer> customers;
+        private readonly List<Customer> _customers;
 
         /// <summary>
         /// 
         /// </summary>
         public MonKeyBankingSolution()
         {
-            customers = new List<Customer>();
+            _customers = new List<Customer>();
         }
 
         public void LoginTest()
         {
-            Form form = new Form();
-            LoginInfo loginInfo = form.DisplayLogin(45, 10);
+            var form = new Form();
+            var loginInfo = form.DisplayLogin(45, 10);
             Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
             Console.ReadKey();
+        }
+
+        public void ConsoleFormTest()
+        {
+            var formTheme = new FormTheme(ConsoleColor.DarkCyan, ConsoleColor.White, ConsoleColor.Yellow);
+            //var form = new ConsoleForm("Hello World", 15, 5, 80, 20, formTheme);
+            //form.Show();
+
+            var formLogin = new FormLogin("Hello World", 15, 5, 30, 8, formTheme);
+            formLogin.Show();
+            LoginInfo loginInfo = formLogin.GetInput<LoginInfo>();
+
+            Console.WriteLine();
+            Console.WriteLine();
         }
 
         /// <summary>
@@ -35,8 +51,8 @@ namespace WeekendAssignment1
         /// </summary>
         public void Start()
         {
-            Form form = new Form();
-            Report report = new Report();
+            var form = new Form();
+            var report = new Report();
             
             int menuId;
 
@@ -47,8 +63,8 @@ namespace WeekendAssignment1
                 switch (menuId)
                 {
                     case 1:
-                        Customer customer = form.DisplayNewCustomer();
-                        customers.Add(customer);
+                        var customer = form.DisplayNewCustomer();
+                        _customers.Add(customer);
                         break;
                     case 2:
                         form.DisplayNewSavingAccount();
@@ -57,16 +73,14 @@ namespace WeekendAssignment1
                         form.DisplayNewTransaction();
                         break;
                     case 4:
-                        report.ShowCustomerAccountList(customers);
+                        report.ShowCustomerAccountList(_customers);
                         break;
                     case 5:
-                        report.ShowAccountStatement(customers);
+                        report.ShowAccountStatement(_customers);
                         break;
                     case 6:
                         Console.WriteLine("You selected menu 6. ** EXIT **");
                         Console.ReadKey();
-                        break;
-                    default:
                         break;
                 }
             } while (menuId != 6);

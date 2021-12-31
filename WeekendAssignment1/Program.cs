@@ -1,4 +1,6 @@
-﻿namespace WeekendAssignment1
+﻿using System;
+
+namespace WeekendAssignment1
 {
     /// <summary>
     /// 
@@ -11,9 +13,10 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            MonKeyBankingSolution monKeyBankingSolution = new MonKeyBankingSolution();
-            monKeyBankingSolution.LoginTest();
-            monKeyBankingSolution.Start();
+            var monKeyBankingSolution = new MonKeyBankingSolution();
+            monKeyBankingSolution.ConsoleFormTest();
+            //monKeyBankingSolution.LoginTest();
+            //monKeyBankingSolution.Start();
         }
     }
 }

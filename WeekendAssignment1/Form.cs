@@ -29,13 +29,13 @@ namespace WeekendAssignment1
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
 
-            int menuId = 0;
+            var menuId = 0;
 
             // infinte loop
             do
             {
-                int col = x;
-                int row = y;
+                var col = x;
+                var row = y;
                 Console.SetCursorPosition(col, row++);
                 Console.Write("= Main Menu =================");
                 Console.SetCursorPosition(col, row++);
@@ -57,7 +57,7 @@ namespace WeekendAssignment1
                 Console.SetCursorPosition(col, row++);
                 Console.Write("=============================");
 
-                ConsoleKeyInfo consoleKeyInfo = Console.ReadKey();
+                var consoleKeyInfo = Console.ReadKey();
 
                 if (consoleKeyInfo.Key == ConsoleKey.D1 || consoleKeyInfo.Key == ConsoleKey.NumPad1)
                 {
@@ -127,7 +127,7 @@ namespace WeekendAssignment1
         {
             Console.WriteLine("You selected menu 1");
 
-            Customer customer = new Customer();
+            var customer = new Customer();
 
             Console.WriteLine("Code: ");
             customer.code = Console.ReadLine();
@@ -164,8 +164,8 @@ namespace WeekendAssignment1
             Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.White;
 
-            int col = x;
-            int row = y;
+            var col = x;
+            var row = y;
             Console.SetCursorPosition(col, row++);
             Console.Write("= Login =====================");
             Console.SetCursorPosition(col, row++);
@@ -179,7 +179,7 @@ namespace WeekendAssignment1
             Console.SetCursorPosition(col, row++);
             Console.Write("=============================");
 
-            LoginInfo info = new LoginInfo();
+            var info = new LoginInfo();
 
             Console.SetCursorPosition(x + 13, y + 2);
             info.UserName = Console.ReadLine();

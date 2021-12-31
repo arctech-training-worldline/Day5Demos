@@ -17,7 +17,7 @@ namespace WeekendAssignment1
         {
             Console.WriteLine("You selected menu 4");
 
-            foreach (Customer customer in customers)
+            foreach (var customer in customers)
             {
                 Console.WriteLine($"Code={customer.code}, Name={customer.name}");
             }

@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,6 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleService\ConsoleRuler.cs" />
+    <Compile Include="ConsoleService\Form\ConsoleForm.cs" />
+    <Compile Include="ConsoleService\FormField.cs" />
+    <Compile Include="ConsoleService\FormLine.cs" />
+    <Compile Include="ConsoleService\Exceptions\FormTooSmallException.cs" />
+    <Compile Include="ConsoleService\Form\FormBorder.cs" />
+    <Compile Include="ConsoleService\Form\FormLogin.cs" />
+    <Compile Include="ConsoleService\Form\FormTheme.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\LoginInfo.cs" />
     <Compile Include="Form.cs" />
@@ -54,5 +64,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
