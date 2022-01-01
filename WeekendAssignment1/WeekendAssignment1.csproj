@@ -45,14 +45,15 @@
   <ItemGroup>
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\LoginInfo.cs" />
-    <Compile Include="Form.cs" />
+    <Compile Include="ConsoleForm\Form.cs" />
     <Compile Include="MonKeyBankingSolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Report.cs" />
+    <Compile Include="ConsoleReport\Report.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

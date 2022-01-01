@@ -3,7 +3,7 @@
     /// <summary>
     /// 
     /// </summary>
-    internal class Program
+    internal static class Program
     {
         /// <summary>
         /// 

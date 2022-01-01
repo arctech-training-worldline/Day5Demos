@@ -1,8 +1,8 @@
-﻿using WeekendAssignment1.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using WeekendAssignment1.Entities;
 
-namespace WeekendAssignment1
+namespace WeekendAssignment1.ConsoleReport
 {
     /// <summary>
     /// 
