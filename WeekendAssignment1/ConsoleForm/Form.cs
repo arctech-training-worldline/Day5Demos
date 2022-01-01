@@ -7,8 +7,6 @@ namespace WeekendAssignment1.ConsoleForm
     /// NOTE: IGNORE the save/cancel buttons on the pdf form design 
     /// They are not needed as when you press enter on last field 
     /// the input is anyway completed
-    /// 
-    /// 
     /// </summary>
     public class Form
     {
@@ -60,7 +58,7 @@ namespace WeekendAssignment1.ConsoleForm
                 Console.Write("|  6.Exit                   |");
                 Console.SetCursorPosition(left, row++);
                 Console.Write("|                           |");
-                Console.SetCursorPosition(left, row++);
+                Console.SetCursorPosition(left, row);
                 Console.Write("=============================");
 
                 ConsoleKeyInfo consoleKeyInfo = Console.ReadKey();
@@ -96,6 +94,7 @@ namespace WeekendAssignment1.ConsoleForm
             } while (menuId == 0);
 
             ResetColor();
+
             return menuId;
         }
 
@@ -104,8 +103,12 @@ namespace WeekendAssignment1.ConsoleForm
         /// </summary>
         internal void DisplayNewTransaction(int left, int top)
         {
+            SetColor();
+
             Console.WriteLine("You selected menu 3");
             Console.ReadKey();
+
+            ResetColor();
         }
 
         /// <summary>
@@ -113,8 +116,12 @@ namespace WeekendAssignment1.ConsoleForm
         /// </summary>
         internal void DisplayNewSavingAccount(int left, int top)
         {
+            SetColor();
+
             Console.WriteLine("You selected menu 2");
             Console.ReadKey();
+
+            ResetColor();
         }
 
         /// <summary>
@@ -123,6 +130,8 @@ namespace WeekendAssignment1.ConsoleForm
         /// <returns></returns>
         internal Customer DisplayNewCustomer(int left, int top)
         {
+            SetColor();
+
             Console.WriteLine("You selected menu 1");
 
             Customer customer = new Customer();
@@ -145,6 +154,8 @@ namespace WeekendAssignment1.ConsoleForm
             //customer.email = Console.ReadLine();
             //Console.WriteLine("Date Of Birth: ");
             //customer.dateOfBirth = Console.ReadLine();
+
+            ResetColor();
 
             return customer;
         }
