@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CodeWalkthroughImprovements.txt" />
+    <Compile Include="ConsoleForm\ConsoleHelper.cs" />
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\LoginInfo.cs" />
     <Compile Include="ConsoleForm\Form.cs" />
-    <Compile Include="MonKeyBankingSolution.cs" />
+    <Compile Include="MonkeyBankBranch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConsoleReport\Report.cs" />
@@ -54,6 +56,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ConsoleForm\FormDesignImprovements.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

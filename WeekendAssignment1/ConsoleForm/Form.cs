@@ -10,17 +10,6 @@ namespace WeekendAssignment1.ConsoleForm
     /// </summary>
     public class Form
     {
-        private void SetColor()
-        {
-            Console.Clear();
-            Console.BackgroundColor = ConsoleColor.DarkCyan;
-        }
-
-        private void ResetColor()
-        {
-            Console.BackgroundColor = ConsoleColor.Black;
-        }
-
         /// <summary>
         /// 
         /// </summary>
@@ -30,8 +19,7 @@ namespace WeekendAssignment1.ConsoleForm
         public int DisplayMainMenu(int left, int top)
         {
             int menuId;
-
-            SetColor();
+            ConsoleHelper.SetColor();
 
             // infinite loop
             do
@@ -93,7 +81,7 @@ namespace WeekendAssignment1.ConsoleForm
                 }
             } while (menuId == 0);
 
-            ResetColor();
+            ConsoleHelper.ResetColor();
 
             return menuId;
         }
@@ -103,12 +91,12 @@ namespace WeekendAssignment1.ConsoleForm
         /// </summary>
         internal void DisplayNewTransaction(int left, int top)
         {
-            SetColor();
+            ConsoleHelper.SetColor();
 
             Console.WriteLine("You selected menu 3");
             Console.ReadKey();
 
-            ResetColor();
+            ConsoleHelper.ResetColor();
         }
 
         /// <summary>
@@ -116,12 +104,12 @@ namespace WeekendAssignment1.ConsoleForm
         /// </summary>
         internal void DisplayNewSavingAccount(int left, int top)
         {
-            SetColor();
+            ConsoleHelper.SetColor();
 
             Console.WriteLine("You selected menu 2");
             Console.ReadKey();
 
-            ResetColor();
+            ConsoleHelper.ResetColor();
         }
 
         /// <summary>
@@ -130,7 +118,7 @@ namespace WeekendAssignment1.ConsoleForm
         /// <returns></returns>
         internal Customer DisplayNewCustomer(int left, int top)
         {
-            SetColor();
+            ConsoleHelper.SetColor();
 
             Console.WriteLine("You selected menu 1");
 
@@ -155,7 +143,7 @@ namespace WeekendAssignment1.ConsoleForm
             //Console.WriteLine("Date Of Birth: ");
             //customer.dateOfBirth = Console.ReadLine();
 
-            ResetColor();
+            ConsoleHelper.ResetColor();
 
             return customer;
         }
@@ -168,7 +156,7 @@ namespace WeekendAssignment1.ConsoleForm
         /// <returns></returns>
         public LoginInfo DisplayLogin(int left, int top)
         {
-            SetColor();
+            ConsoleHelper.SetColor();
 
             int row = top;
             Console.SetCursorPosition(left, row++);
@@ -192,7 +180,7 @@ namespace WeekendAssignment1.ConsoleForm
             Console.SetCursorPosition(left + 13, top + 3);
             info.Password = Console.ReadLine();
 
-            ResetColor();
+            ConsoleHelper.ResetColor();
 
             return info;
         }

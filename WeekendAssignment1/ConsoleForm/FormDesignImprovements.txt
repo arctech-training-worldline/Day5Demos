@@ -1,0 +1,35 @@
+﻿        public LoginInfo DisplayLoginDesignImprovements(int left, int top)
+        {
+            SetColor();
+
+            int row = top;
+
+            DisplayTextAt("= Login =====================", left, row++);
+            DisplayTextAt("|                           |", left, row++);
+            DisplayTextAt("|  UserName: ____________   |", left, row++);
+            DisplayTextAt("|  Password: ____________   |", left, row++);
+            DisplayTextAt("|                           |", left, row++);
+            DisplayTextAt("=============================", left, row);
+
+            LoginInfo info = new LoginInfo();
+
+            info.UserName = ReadTextAt(left + 13, top + 2);
+            info.Password = ReadTextAt(left + 13, top + 2);
+
+            ResetColor();
+
+            return info;
+        }
+
+        private static string ReadTextAt(int left, int top)
+        {
+            Console.SetCursorPosition(left, top);
+            string line = Console.ReadLine();
+            return line;
+        }
+
+        private void DisplayTextAt(string text, int left, int top)
+        {
+            Console.SetCursorPosition(left, top);
+            Console.Write(text);
+        }

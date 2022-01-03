@@ -11,9 +11,9 @@
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            MonKeyBankingSolution monKeyBankingSolution = new MonKeyBankingSolution();
-            monKeyBankingSolution.LoginTest();
-            monKeyBankingSolution.Start();
+            MonkeyBankBranch branch1 = new MonkeyBankBranch();
+            branch1.Login();
+            branch1.Start();
         }
     }
 }

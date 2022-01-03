@@ -1,0 +1,3 @@
+﻿01. Review FormDesignImprovements.txt
+02. Move SetColor & ResetColor to a helper class ConsoleHelper
+03. 

@@ -3,16 +3,16 @@
     /// <summary>
     /// 
     /// </summary>
-    internal class Customer
+    public class Customer
     {
-        internal string code;
-        internal string name;
-        internal string address1;
-        internal string address2;
-        internal string country;
-        internal string mobile;
-        internal string pan;
-        internal string email;
-        internal string dateOfBirth;
+        public string code;
+        public string name;
+        public string address1;
+        public string address2;
+        public string country;
+        public string mobile;
+        public string pan;
+        public string email;
+        public string dateOfBirth;
     }
 }

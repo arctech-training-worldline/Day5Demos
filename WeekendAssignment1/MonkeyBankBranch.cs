@@ -9,23 +9,23 @@ namespace WeekendAssignment1
     /// <summary>
     /// 
     /// </summary>
-    internal class MonKeyBankingSolution
+    internal class MonkeyBankBranch
     {
         private readonly List<Customer> _customers;
 
         /// <summary>
         /// 
         /// </summary>
-        public MonKeyBankingSolution()
+        public MonkeyBankBranch()
         {
             _customers = new List<Customer>();
         }
 
-        public void LoginTest()
+        public void Login()
         {
             Form form = new Form();
             LoginInfo loginInfo = form.DisplayLogin(45, 10);
-            
+
             Console.WriteLine($"You entered Username={loginInfo.UserName}, Password={loginInfo.Password}");
             Console.ReadKey();
         }
