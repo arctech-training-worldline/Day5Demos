@@ -49,6 +49,7 @@
     <Compile Include="Demo3Destructor.cs" />
     <Compile Include="Demo4This.cs" />
     <Compile Include="Demo5Indexer.cs" />
+    <Compile Include="DemoBitwiseOperators.cs" />
     <Compile Include="Rocket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

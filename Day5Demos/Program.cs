@@ -11,8 +11,10 @@ namespace Day5Demos
     {
         static void Main(string[] args)
         {
-            Demo5Indexer.TestIndexerWithPublicMemberVariables();            
-            Demo5Indexer.TestIndexer();
+            DemoBitwiseOperators.TestSwapBits();
+
+            //Demo5Indexer.TestIndexerWithPublicMemberVariables();            
+            //Demo5Indexer.TestIndexer();
 
             //Demo4This.TestThis();
 
