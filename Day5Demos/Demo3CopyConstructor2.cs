@@ -31,6 +31,7 @@ namespace Day5Demos
             code = employee.code;
             name = employee.name;
             department = new Department { id = employee.department.id, name = employee.department.name };
+            // Note: You could create a copy constructor for Department class also!!
         }
 
         public Employee CreateShallowCopy()
