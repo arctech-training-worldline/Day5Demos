@@ -60,6 +60,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="documents\2021-12-31 - Session 1.pdf" />
+    <None Include="documents\Algorithm explanation = Swap bits 3 4 5 with 24 25 26.xlsx" />
     <None Include="documents\CSharp-classes.pdf" />
     <None Include="documents\WeekEndAssignment.pdf" />
   </ItemGroup>
