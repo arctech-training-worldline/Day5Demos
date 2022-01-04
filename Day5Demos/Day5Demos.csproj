@@ -46,6 +46,7 @@
     <Compile Include="Demo1.cs" />
     <Compile Include="Demo2Constructors.cs" />
     <Compile Include="Demo3CopyConstructor.cs" />
+    <Compile Include="Demo3CopyConstructor2.cs" />
     <Compile Include="Demo3Destructor.cs" />
     <Compile Include="Demo4This.cs" />
     <Compile Include="Demo5Indexer.cs" />

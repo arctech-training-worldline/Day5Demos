@@ -11,7 +11,9 @@ namespace Day5Demos
     {
         static void Main(string[] args)
         {
-            DemoBitwiseOperators.TestSwapBits();
+            Demo3CopyConstructor2.TestCopyConstructor();
+
+            //DemoBitwiseOperators.TestSwapBits();
 
             //Demo5Indexer.TestIndexerWithPublicMemberVariables();            
             //Demo5Indexer.TestIndexer();
