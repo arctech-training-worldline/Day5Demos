@@ -8,6 +8,10 @@ namespace Day5Demos
 {
     internal static class DemoBitwiseOperators
     {
+        /// <summary>
+        /// Refer attached file "Algorithm explanation = Swap bits 3 4 5 with 24 25 26.xlsx"
+        /// which explains graphically with single byte how to do bits swapping.
+        /// </summary>
         public static void TestSwapBits()
         {
             uint num = 748654965;
